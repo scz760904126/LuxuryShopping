@@ -1,0 +1,73 @@
+package com.ydles.user.service;
+
+import com.ydles.order.pojo.Task;
+import com.ydles.user.pojo.User;
+import com.github.pagehelper.Page;
+
+import java.util.List;
+import java.util.Map;
+
+public interface UserService {
+
+    /***
+     * 查询所有
+     * @return
+     */
+    List<User> findAll();
+
+    /**
+     * 根据ID查询
+     * @param username
+     * @return
+     */
+    User findById(String username);
+
+    /***
+     * 新增
+     * @param user
+     */
+    void add(User user);
+
+    /***
+     * 修改
+     * @param user
+     */
+    void update(User user);
+
+    /***
+     * 删除
+     * @param id
+     */
+    void delete(String username);
+
+    /***
+     * 多条件搜索
+     * @param searchMap
+     * @return
+     */
+    List<User> findList(Map<String, Object> searchMap);
+
+    /***
+     * 分页查询
+     * @param page
+     * @param size
+     * @return
+     */
+    Page<User> findPage(int page, int size);
+
+    /***
+     * 多条件分页查询
+     * @param searchMap
+     * @param page
+     * @param size
+     * @return
+     */
+    Page<User> findPage(Map<String, Object> searchMap, int page, int size);
+
+    /**
+     * 添加用户积分
+     * @param task 监听到的增加用户积分的任务
+     * @return 分数
+     */
+    int updateUserPoint(Task task);
+}

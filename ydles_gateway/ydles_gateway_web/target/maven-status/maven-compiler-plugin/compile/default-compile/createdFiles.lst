@@ -1,0 +1,5 @@
+com\ydles\web\gateway\filter\AuthFilter.class
+com\ydles\web\gateway\service\AuthService.class
+com\ydles\web\gateway\WebGatewayApplication.class
+com\ydles\web\gateway\service\impl\AuthServiceImpl.class
+com\ydles\web\gateway\utils\UrlUtil.class
